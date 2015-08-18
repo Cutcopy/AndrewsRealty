@@ -1,0 +1,26 @@
+{
+  "name": "andrews_realty",
+  "version": "1.0.0",
+  "description": "real estate redesign",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cutcopy/AndrewsRealty.git"
+  },
+  "keywords": [
+    "real",
+    "estate",
+    "agents",
+    "static",
+    "website"
+  ],
+  "author": "Bryce Stradling",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cutcopy/AndrewsRealty/issues"
+  },
+  "homepage": "https://github.com/Cutcopy/AndrewsRealty#readme"
+}
