@@ -26,8 +26,10 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
+    "gulp-autowatch": "^1.0.2",
     "gulp-imagemin": "^2.3.0",
     "gulp-jade": "^1.1.0",
+    "gulp-live-server": "0.0.23",
     "gulp-livereload": "^3.8.0",
     "gulp-stylus": "^2.0.6",
     "imagemin-pngquant": "^4.1.2"

@@ -1,42 +1,63 @@
 var gulp = require('gulp');
-var jade = require('gulp-jade');
 var stylus = require('gulp-stylus');
+var jade = require('gulp-jade');
 var autoprefixer = require('gulp-autoprefixer');
-var imagemin = require('gulp-imagemin');
-var pngquant = require('imagemin-pngquant');
 var autowatch = require('gulp-autowatch');
+var gls = require('gulp-live-server');
 
-// jade
+ //get styles
+gulp.task('style', function () {
+	gulp.src('./src/stylus/main.styl')
+		.pipe(stylus())
+		.pipe(gulp.dest('./css/main.css'));
+});
+
+ //get jade
 gulp.task('templates', function() {
   var YOUR_LOCALS = {};
 
-  gulp.src('./jade/*.jade')
+  gulp.src('./src/jade/*.jade')
     .pipe(jade({
       locals: YOUR_LOCALS
     }))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./*.html'))
 });
 
-// Get one .styl file and render
-gulp.task('stylus', function () {
-  gulp.src('./stylus/main.styl')
-    .pipe(stylus())
-    .pipe(gulp.dest('./css/'));
-});
-
-// autoprefixer
-gulp.task('autoprefix', function () {
-    return gulp.src('./css/')
+//autoprefixer
+gulp.task('prefix', function () {
+    return gulp.src('./css/*.css')
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('./css/'));
+        .pipe(gulp.dest('./css/main-min.css'));
+});
+
+// autowatch
+var paths = {
+  stylus: './src/stylus/*.styl',
+  html: './**/*.html',
+};
+
+gulp.task('watch', function() {
+  autowatch(gulp, paths);
+});
+
+//live-server
+gulp.task('serve', function() {
+    //1. serve with default settings
+    var server = gls.static(); //equals to gls.static('public', 3000);
+    server.start();
+
+    //use gulp.watch to trigger server actions(notify, start or stop)
+    gulp.watch(['./css/*.css', './**/*.html'], function () {
+        server.notify.apply(server, arguments);
+    });
 });
 
 // compress
 gulp.task('compress', function () {
-  gulp.src('./stylus/main.styl')
+  gulp.src('./src/stylus/main.styl')
     .pipe(stylus({
       compress: true
     }))
@@ -44,7 +65,6 @@ gulp.task('compress', function () {
 });
 
 //imagemin
-
 gulp.task('imagemin', function () {
     return gulp.src('./img/*')
         .pipe(imagemin({
@@ -52,22 +72,9 @@ gulp.task('imagemin', function () {
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))
-        .pipe(gulp.dest('img'));
-});
-
-// key = task name to run
-// value = glob or array of globs to watch
-var paths = {
-  stylus: './stylus/**/*.styl',
-  jade: './jade/**/*.html',
-};
-
-gulp.task('watch', function() {
-  autowatch(gulp, paths);
+        .pipe(gulp.dest('./img/'));
 });
 
 
-
-
-
-gulp.task('default', ['templates', 'stylus', 'autoprefix', 'compress', 'imagemin','watch']);
+gulp.task('default', ['templates', 'style', 'prefix','watch']);
+gulp.task('build', ['templates', 'style', 'prefix','compress', 'imagemin']);
