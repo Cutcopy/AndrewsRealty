@@ -6,20 +6,29 @@
     <title>Andrews Realty Group - </title>
     <meta name="description" content="Rochester Realty Professionals, Michigan Real Estate Agents">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/flexgrid.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Maven+Pro|Cinzel" rel="stylesheet" type="text/css">
   </head>
   <body>
+    <h1 class="title">Andrews Realty Group</h1>
     <nav class="top-nav">
-      <ul class="nav-socials">
-        <li><a href=""><i class="fa fa-facebook"></i></a></li>
-        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
-        <li><a href=""><i class="fa fa-twitter"></i></a></li>
-        <li><a href=""><i class="fa fa-youtube"></i></a></li>
-      </ul>
-      <div class="container">
-        <div class="row">
-          <div class="twelve columns">       <a href="/"><img src="./img/photos/ARG_gold.png" alt="Andrews Realty Group" class="brand-image"></a>
+      <div class="row start-xs">
+        <div class="col-xs-4">
+          <div class="box">
+            <ul class="nav-socials">
+              <li><a href=""><i class="fa fa-facebook"></i></a></li>
+              <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+              <li><a href=""><i class="fa fa-twitter"></i></a></li>
+              <li><a href=""><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row center-sm">
+        <div class="col-sm-6"> 
+          <div class="box"> <a href="/"><img src="./img/photos/ARG_gold.png" alt="Andrews Realty Group" class="brand-image"></a>
             <ul class="nav-links">
               <li><a href="/">Home &nbsp |</a></li>
               <li><a href="">Video Blog &nbsp |</a></li>
@@ -31,12 +40,34 @@
       </div>
     </nav>
     <section class="hero"></section>
-    <div class="container">
-      <section class="row cta">
-        <div class="four columns"><a href="#"><img src="" alt=""><span>Your Home Value</span></a></div>
-        <div class="four columns"><a href="#"><img src="" alt=""><span>Search For Homes</span></a></div>
-        <div class="four columns"><a href="#"><img src="" alt=""><span>Get Financed</span></a></div>
-      </section>
-    </div>
+    <section class="ctas">
+      <div class="cta"><a href="#">
+          <div class="border"><img src="/img/house_icon.svg" alt=""><span>Your Home Value</span></div></a></div>
+      <div class="cta"><a href="#">
+          <div class="border"><img src="/img/map_icon.svg" alt=""><span>Search For Homes</span></div></a></div>
+      <div class="cta"><a href="#">
+          <div class="border"><img src="/img/shaking_hands.svg" alt=""><span>Get Financed</span></div></a></div>
+    </section>
+    <section class="about">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2>Changing Lives</h2>
+          <div class="row start-sm about-container">
+            <div class="col-sm-offset-1 col-sm-4">
+              <div class="box zillow-video">
+                <iframe width="500" height="302" src="https://www.youtube.com/embed/NO8fWjv1oSs" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-sm-4"> 
+              <div class="box about-content">
+                <p>Buying or selling a home is a major milestone. Andrews Realty Group is here to help you with your transition. As a team of Real Estate agents, we'll use our local expertise and become your trusted home ownership consultants. </p>
+                <p>We offer a wide range of service levels to help you shop or sell, however you're most comfortable.</p>
+                <buttton>Lets Get In Touch</buttton>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
