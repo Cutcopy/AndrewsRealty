@@ -20,6 +20,14 @@
   box-shadow 0px 0px 20px 5px alpha(black, 50%)
   a
     text-decoration none
+    &:hover
+      .border
+        border 3px solid $primary-hover
+      svg
+        fill: $primary-hover
+      span
+        color $primary-hover
+
   .border
     border 3px solid $primary-color
     height 270px
@@ -29,9 +37,11 @@
     align-items center
     align-content center
     flex-direction column
-    img
+    svg
       width 60%
       height 144px
+      fill: $primary-color
+      fill-rule evenodd
     span
       margin 1rem
       font-size 1.5rem
