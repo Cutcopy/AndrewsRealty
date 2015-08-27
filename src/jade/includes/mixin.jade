@@ -1,18 +1,21 @@
-mixin team(source,alt,name, title, bio )
-  .row
+mixin team(source, name, title, license, bio, bio2)
+  .row.team-member
     .four.columns
-      img.headshot(src= source, alt= alt)
+      img.headshot(src= source, alt= name)
     .eight.columns
       h2= name
       h3= title
+      p= license
       p= bio
+      p= bio2
       
-mixin team2(source,alt,name, title, bio )
-  .row
+mixin team2(source, name, title, license, bio )
+  .row.team-member
     .eight.columns
       h2= name
       h3= title
+      p= license
       p= bio
     .four.columns
-      img.headshot(src= source, alt= alt)
+      img.headshot(src= source, alt= name)
     
