@@ -6,7 +6,9 @@
     <title>Andrews Realty Group - </title>
     <meta name="description" content="Rochester Realty Professionals, Michigan Real Estate Agents">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/skeleton.css">
+    <link rel="stylesheet" href="./css/carousel.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="http://fonts.googleapis.com/css?family=Maven+Pro|Cinzel" rel="stylesheet" type="text/css">
@@ -75,18 +77,38 @@
         </div>
       </div>
     </section>
-    <section class="testionials">
-      <div class="row center">
-        <div class="5 columns">
-          <div class="box testimonial-wrapper">
-            <ul class="testimionial-slider">
-              <li>
-                <div class="testimonial">
-                  <p><span class="quote">“</span> Brad did a great job throughout the whole sales process. He was very knowledgable about the area that the home I was selling was located and helped me pick a price point that worked great.<span class="quote">”</span></p>
-                  <p class="client-name">- A recent Client</p>
+    <section id="carousel" class="testionials">
+      <div class="container">
+        <div class="row testimonial-wrapper">
+          <div class="5 columns">
+            <div class="quote"> </div>
+            <div id="fade-quote-carousel" data-ride="carousel" data-interval="3000" class="carousel slide">
+              <ol class="carousel-indicators">
+                <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+                <li data-target="#fade-quote-carousel" data-slide-to="2"> </li>
+              </ol>
+              <div role="listbox" class="carousel-inner">
+                <div class="active item">
+                  <blockquote>
+                    <p><span class="big-quote">“</span>div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nulla ratione amet possimus, modi deleniti cum! Ipsam id accusantium veniam sint tempore alias provident, velit laudantium itaque repellat molestiae magni.<span class="big-quote">"</span></p>
+                    <p>- Recent Client</p>
+                  </blockquote>
                 </div>
-              </li>
-            </ul>
+                <div class="item">
+                  <blockquote>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque reiciendis a quaerat fugiat distinctio. Voluptatum ab dicta ea voluptatem numquam veniam. Molestias explicabo nostrum placeat velit, dolores sit nam ab!"</p>
+                    <p>- Recent Client</p>
+                  </blockquote>
+                </div>
+                <div class="item">
+                  <blockquote>
+                    <p>"Necessitatibus, dignissimos libero, eaque similique vel animi eius reprehenderit excepturi nihil. Earum explicabo illo consectetur, tempora repellendus nihil nobis natus nam, at, ipsum ratione quidem fugiat, voluptatum harum sint ipsa."      </p>
+                    <p>- Recent Client</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -99,7 +121,7 @@
               <address><a href="tel:248-841-4717">248-841-4717</a><br><a href="mailto:">info@andrewsrealtygroup.com</a><br><span>439 S Main Street, Suite 202 </span><br><span>Rochester, MI 48307​  </span></address>
             </div>
           </div>
-          <div class="six columns">
+          <div class="six columns footer-nav">
             <div class="right-sm">
               <ul class="nav-links">
                 <li><a href="/">Home &nbsp |</a></li>
@@ -108,7 +130,7 @@
                 <li><a href="/meet_the_team.html">Meet The Team</a></li>
               </ul>
             </div>
-            <div class="box right-sm"></div>
+            <div class="right-sm"></div>
             <ul class="nav-socials">
               <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="199.2" height="199.2" class="icon-svg" viewBox="0 0 199.2 199.2"><path d="M99.6 0C44.6 0 0 44.6 0 99.6c0 55 44.6 99.6 99.6 99.6s99.6-44.6 99.6-99.6c0-55-44.6-99.6-99.6-99.6zM111 106v69H84v-69H61V79h23V59.5c0-11.2 3-19.9 9.2-26.1 6.3-6.2 14.7-9.3 25.1-9.3 8.9 0 15.7.4 20.7 1.1V49h-14.5c-5.2 0-8.8 1.1-10.7 3.3-1.8 2.2-2.9 5.5-2.9 9.8V79h26.8l-3.5 27H111z"/></svg>
 </a></li>
@@ -123,5 +145,7 @@
         </div>
       </div>
     </footer>
+    <script type="text/javascript" src="./js/jquery/dist/jquery.min.js">              </script>
+    <script type="text/javascript" src="./js/carousel.min.js"></script>
   </body>
 </html>

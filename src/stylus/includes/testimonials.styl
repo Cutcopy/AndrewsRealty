@@ -1,7 +1,42 @@
 .quote
-  //font-size 2rem
+  font-size 6.5rem
   font-family 'Cinzel', Trajan, Serif
+  position absolute
+
 .testimonial-wrapper
-  margin 6rem
+  margin 3rem
+
 .testimionial-slider
   list-style-type none
+
+#fade-quote-carousel.carousel
+  padding-bottom  60px
+
+#fade-quote-carousel.carousel .carousel-inner .item
+  opacity  0
+  -webkit-transition-property  opacity
+      -ms-transition-property  opacity
+          transition-property  opacity
+
+#fade-quote-carousel.carousel .carousel-inner .active
+  opacity  1
+  -webkit-transition-property  opacity
+      -ms-transition-property  opacity
+          transition-property  opacity
+
+#fade-quote-carousel.carousel .carousel-indicators
+  bottom  10px
+
+#fade-quote-carousel.carousel .carousel-indicators > li
+  background #eee
+  border 2px solid #c2c2c2
+
+#fade-quote-carousel blockquote
+  text-align  center
+  border  none
+
+#fade-quote-carousel .profile-circle
+  width  100px
+  height  100px
+  margin  0
+  border-radius  100px

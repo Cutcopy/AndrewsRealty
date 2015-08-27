@@ -9,11 +9,20 @@ footer
   color $primary-color
   padding-left 1rem
   margin-left 1rem
+  display flex
+  flex-direction row
+  align-items center
+  align-content center
+  justify-content flex-start
+  flex-wrap wrap
+  address
+    padding-left 1rem
   a
     text-decoration none
   .nav-links
       text-align left
-
+.footer-nav
+  text-align right
 .footer-brand
   min-width 200px
   max-width 400px
@@ -22,3 +31,16 @@ footer
   border-right 2px solid $primary-color
   padding-right 1rem
 
+@media (max-width: 550px){
+  .contact-info{
+    text-align center
+    justify-content center
+  }
+  .footer-brand {
+    border-right 0px solid transparent
+  }
+  .footer-nav{
+    text-align center
+  }
+
+}
