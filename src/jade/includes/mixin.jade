@@ -1,0 +1,18 @@
+mixin team(source,alt,name, title, bio )
+  .row
+    .four.columns
+      img.headshot(src= source, alt= alt)
+    .eight.columns
+      h2= name
+      h3= title
+      p= bio
+      
+mixin team2(source,alt,name, title, bio )
+  .row
+    .eight.columns
+      h2= name
+      h3= title
+      p= bio
+    .four.columns
+      img.headshot(src= source, alt= alt)
+    

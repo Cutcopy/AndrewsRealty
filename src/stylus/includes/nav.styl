@@ -5,9 +5,9 @@
   text-align center
   position absolute
   width 100%
-  
+
 .nav-socials
-  
+
   li
     list-style-type none
     display inline
@@ -24,7 +24,7 @@
     fill $primary-color
     &:hover
       fill $primary-hover
-      
+
 .nav-links
   list-style-type none
   li
@@ -40,3 +40,12 @@
   width 100%
   margin-top 1rem
   display inline
+
+@media (max-width: 550px){
+  .brand-image{
+    max-width 300px
+  }
+  .nav-links{
+    font-size 1.15rem
+  }
+}
