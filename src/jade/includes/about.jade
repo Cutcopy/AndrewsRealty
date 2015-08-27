@@ -10,4 +10,17 @@ section.about
           .box.about-content
             p Buying or selling a home is a major milestone. Andrews Realty Group is here to help you with your transition. As a team of Real Estate agents, we'll use our local expertise and become your trusted home ownership consultants. 
             p We offer a wide range of service levels to help you shop or sell, however you're most comfortable.
-            button Lets Get In Touch
+            button(type="button" data-toggle="modal" data-target="#myModal") Lets Get In Touch
+.modal.fade#myModal(tabindex="-1" role="dialog" aria-labelledby="Contact us")
+  .modal-dialog(role="document")
+    .modal-content
+      .modal-header
+        h2.modal-title#Contact_us Contact Us
+        button.close(type="button", data-dismiss="modal" aria-label="Close") <span aria-hidden="true">&times;</span>
+      .modal-body
+        form.contact(action="#" method="post")
+          input(type="text" placeholder="Name" required)
+          input(type="Email" placeholder="Email" required)
+          textarea(name="message" required) Message
+          input(type="submit")
+        
