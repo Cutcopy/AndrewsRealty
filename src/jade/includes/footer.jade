@@ -1,17 +1,18 @@
-footer
+footer(itemscope='realestateagent' itemtype='http://schema.org/RealEstateAgent')
   .footer-wrapper
     .row
       .six.columns
           .contact-info
-            img.footer-brand(src="/img/photos/ARG_gold.png", alt="")
+            img.footer-brand(src="/img/photos/ARG_gold.png", alt="Andrews Realty Group" itemprop="logo")
             address
-              a(href="tel:248-841-4717") 248-841-4717
+              a(href="tel:248-841-4717" itemprop="telephone") 248-841-4717
               br
-              a(href="mailto:") info@andrewsrealtygroup.com
+              a(href="mailto:" itemprop="email") info@andrewsrealtygroup.com
               br
-              span 439 S Main Street, Suite 202 
-              br
-              span Rochester, MI 48307​  
+              div(itemprop="address")
+                span 439 S Main Street, Suite 202 
+                br
+                span Rochester, MI 48307​  
       .six.columns.footer-nav
         .right-sm
           ul.nav-links
@@ -37,6 +38,9 @@ footer
           li
             a(href="#")
               include ../../../img/yt.svg
+      .hidden
+        span(itemprop="founder") Brad Saarela
+        span(itemprop="brand") Andrews Realty Group
 script(type="text/javascript" src="./js/jquery/dist/jquery.min.js")               
 script(type="text/javascript" src="./js/carousel.min.js")
 script(type="text/javascript" src="./js/modal.js")
