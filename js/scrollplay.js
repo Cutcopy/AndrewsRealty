@@ -1,6 +1,6 @@
-/*globals jQuery:true, playerjs:true */
+/*global jQuery:true, playerjs:true */
 
-;(function ( $, window, document, undefined ) {
+(function($, document, window){
 
   // An object that keeps track of all the iframes on the page.
   var Scroller = function(iframes){
@@ -23,6 +23,9 @@
         this.add($elem, player);
       }, this);
     }, this));
+
+    // Listen to the scroll events.
+    this.listen();
   };
 
   // Add the elements positioning data.
@@ -141,10 +144,37 @@
     }, this));
   };
 
-  $.fn.scrollplay = function() {
-    var scroller = new Scroller(this);
-    scroller.listen();
-    return this;
-  };
 
-})( jQuery, window, document );
+  $(document).on('ready', function(){
+
+    var URLS = [
+      'https://youtu.be/NO8fWjv1oSs'
+    ];
+
+    // Embed the URLS.
+    $.embedly.oembed(URLS)
+      .progress(function(obj){
+
+        if (!obj.html){
+          return false;
+        }
+
+        // Responsive.
+        var ratio = ((obj.height/obj.width)*100).toPrecision(4) + '%';
+        var $div = $('<div class="resp"></div>');
+        $div.append(obj.html);
+        $div.css('padding-bottom', ratio);
+
+        // For padding in the demo.
+        var $box = $('<div class="scroll-box"></div>');
+        $box.append($div);
+
+        $('.zillow-video').append($box);
+      })
+    .done(function(){
+      // Set up all the new scrollers.
+      var scroller = new Scroller($('iframe'));
+    });
+  });
+
+})(jQuery, document, window);
