@@ -1,5 +1,6 @@
 .team {
   display: flex;
+  flex-flow: column wrap;
 }
 .team h1 {
   text-align: center;
@@ -16,4 +17,14 @@
 }
 .team-member {
   margin-bottom: 3rem;
+  display: flex;
+  flex-flow: row no-wrap;
+}
+@media (max-width: 500px) {
+  .team-member {
+    flex-flow: column wrap;
+  }
+  .four {
+    order: 0;
+  }
 }
