@@ -19,9 +19,10 @@ section.about
         h2.modal-title#Contact_us Contact Us
         button.close(type="button", data-dismiss="modal" aria-label="Close") <span aria-hidden="true">&times;</span>
       .modal-body
-        form.contact(action="#" method="post")
-          input(type="text" placeholder="Name" required)
-          input(type="Email" placeholder="Email" required)
-          textarea(name="message" required) Message
-          input(type="submit")
+        form.contact(action="http://vyralmarketing.com/staticforms/sendEmail.php" method="post")
+          input(type="hidden" value="brycestradling@gmail.com" name="emailTo")
+          input(type="text" placeholder="Name" name="name"  required)
+          input(type="Email" placeholder="Email" name="email"  required)
+          textarea(name="message" placeholder="Message" required)
+          input(type="submit"  name="submitContact"  data-dismiss="modal" aria-label="Close")
         

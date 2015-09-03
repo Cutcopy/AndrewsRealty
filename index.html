@@ -83,11 +83,12 @@
               <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
-              <form action="#" method="post" class="contact">
-                <input type="text" placeholder="Name" required>
-                <input type="Email" placeholder="Email" required>
-                <textarea name="message" required>Message</textarea>
-                <input type="submit">
+              <form action="http://vyralmarketing.com/staticforms/sendEmail.php" method="post" class="contact">
+                <input type="hidden" value="brycestradling@gmail.com" name="emailTo">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="Email" placeholder="Email" name="email" required>
+                <textarea name="message" placeholder="Message" required></textarea>
+                <input type="submit" name="submitContact" data-dismiss="modal" aria-label="Close">
               </form>
             </div>
           </div>
