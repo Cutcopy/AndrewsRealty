@@ -1,4 +1,7 @@
 .team
+  display flex
+  flex-flow column wrap
+  padding-bottom 800px
   h1
     text-align center
     font-size 6rem
@@ -9,6 +12,42 @@
   border-radius 50%
   padding 10px
   border 3px solid black
+  margin -1em
 
 .team-member
   margin-bottom 3rem
+  display flex
+  flex-flow row no-wrap
+
+@media (max-width 500px) {
+  .team-hero .hero {
+    height 500px
+  }
+}
+
+@media (max-width 600px) {
+  .top-nav {
+    background black
+  }
+  .team-hero .hero {
+    background url("../img/Photos/heashots/fullteam.JPG");
+    background-size 100%
+    background-position center 0%
+    background-attachment inherit
+    height 600px
+    background-repeat: no-repeat
+    position relative
+    z-index -1
+    top 283px
+    margin-bottom 3rem
+}
+  .team-member {
+     flex-flow column wrap
+  }
+  .four{
+    order 0
+  }
+  .eight{
+    order: 1
+  }
+}

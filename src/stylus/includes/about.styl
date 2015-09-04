@@ -11,8 +11,12 @@
 .zillow-video
   margin 1rem 0rem
   flex-shrink 200
-  min-width 320px
+  //min-width 320px
   max-height 394px
+
+#video
+  max-width: 700px;
+  width: 100%;
 
 .embed-container
     iframe
@@ -21,6 +25,9 @@
 .about-content
   //margin 1rem
 @media (max-width: 550px){
+  .about h2{
+    font-size 3.25rem
+  }
   .about button{
     font-size 10px
   }
@@ -30,9 +37,15 @@
   input
     display block
     width 90%
+    &:focus
+      outline-color $primary-color
+      border 1px solid $primary-color
   textarea
     display block
     width 90%
+    &:focus
+      outline-color $primary-color
+      border 1px solid $primary-color
   input[type="submit"]
     background black
     color $primary-color
@@ -52,3 +65,7 @@
     background none
     border none
     outline none
+
+.contact
+  textarea
+    color #bdbdbd
