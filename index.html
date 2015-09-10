@@ -83,8 +83,8 @@
               <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
-              <form action="http://vyralmarketing.com/staticforms/sendEmail.php" method="post" class="contact">
-                <input type="hidden" value="brycestradling@gmail.com" name="emailTo">
+              <form action="/sendEmail.php" method="post" onsubmit="return setReturn()" class="contact">
+                <input type="hidden" value="Sales@andrewsrealtygroup.com" name="emailTo">
                 <input type="text" placeholder="Name" name="name" required>
                 <input type="Email" placeholder="Email" name="email" required>
                 <textarea name="message" placeholder="Message" required></textarea>
@@ -132,7 +132,7 @@
           <div class="row">
             <div class="six columns">
               <div class="contact-info"><img src="img/ARG.svg" alt="Andrews Realty Group" itemprop="logo" class="footer-brand">
-                <address><a href="tel:248-841-4717" itemprop="telephone">248-841-4717</a><br><a href="mailto:" itemprop="email">info@andrewsrealtygroup.com</a><br>
+                <address><a href="tel:248-841-4717" itemprop="telephone">Office: 248-841-4717</a><br><a href="tel:248-505-4235">Sales- Call/text Anytime: 248-505-4235</a><br><a href="mailto:" itemprop="email">info@andrewsrealtygroup.com</a><br>
                   <div itemprop="address"><span>439 S Main Street, Suite 202 </span><br><span>Rochester, MI 48307​</span></div>
                 </address>
               </div>

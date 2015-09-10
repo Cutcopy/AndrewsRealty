@@ -19,8 +19,8 @@ section.about
         h2.modal-title#Contact_us Contact Us
         button.close(type="button", data-dismiss="modal" aria-label="Close") <span aria-hidden="true">&times;</span>
       .modal-body
-        form.contact(action="http://vyralmarketing.com/staticforms/sendEmail.php" method="post")
-          input(type="hidden" value="brycestradling@gmail.com" name="emailTo")
+        form.contact(action="/sendEmail.php" method="post" onsubmit="return setReturn()")
+          input(type="hidden" value="Sales@andrewsrealtygroup.com" name="emailTo")
           input(type="text" placeholder="Name" name="name"  required)
           input(type="Email" placeholder="Email" name="email"  required)
           textarea(name="message" placeholder="Message" required)

@@ -402,3 +402,11 @@ function checkScroll() {
 
 window.addEventListener('scroll', checkScroll, false);
 window.addEventListener('resize', checkScroll, false);
+
+
+//Form submit
+function setReturn(){
+ localStorage.setItem("thanks", "Your request was sent successfully!");
+}
+document.getElementById("thanks").innerHTML = localStorage.getItem("thanks");
+localStorage.clear();
